@@ -130,3 +130,13 @@
   color: #515151;
   cursor: pointer;
 }
+
+.error-view {
+  display: flex;
+  height: 100%;
+  font-size: 24px;
+  color: #b9b9b9;
+  font-weight: bold;
+  align-items: center;
+  justify-content: center;
+}

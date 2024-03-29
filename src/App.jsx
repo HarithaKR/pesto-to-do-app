@@ -164,7 +164,7 @@ const App = (props) => {
   }
 
   const renderListGridContainer = () => {
-    const {activeFilter, formattedList, loading, error} = {...state};
+    const {activeFilter, formattedList, loading, error, toDoList} = {...state};
     if (loading) {
       return (
         <div className="list-grid-container">
@@ -175,10 +175,18 @@ const App = (props) => {
     
     if (error) {
       return (
-        <div className="list-grid-container">
+        <div className="list-grid-container error-view">
           "Oops! Something went wrong..."
         </div>
       );
+    }
+    
+    if (!toDoList || toDoList.length === 0) {
+      return (
+        <div className="list-grid-container error-view">
+          {'Your list is empty. Please click on "Add Task" button to add a task'}
+        </div>
+      )
     }
     const columns = [];
     if (!activeFilter) {
