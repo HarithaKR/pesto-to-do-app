@@ -1,0 +1,132 @@
+.todo-app-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+.app-header {
+  background: #000;
+  color: #eda420;
+  padding: 16px 24px;
+  text-align: center;
+  font-size: 19px;
+  line-height: 21px;
+  flex-shrink: 0;
+}
+
+.status-card {
+  padding: 12px 8px;
+  border: 1px solid #d4d4d4;
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.status-cards {
+  display: grid;
+  grid-template-columns: repeat(4, auto);
+  margin: 24px;
+  grid-gap: 12px;
+  flex-shrink: 0;
+}
+
+.status-count {
+  background: #b9b9b9;
+  border-radius: 12px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-weight: bold;
+  padding: 2px 8px;
+  font-size: 12px;
+  margin: 0 8px;
+  min-width: 30px;
+}
+
+.list-grid-container,
+.filter-dropdown {
+  padding: 0 24px 24px;
+}
+
+.filter-dropdown {
+  display: flex;
+  flex-shrink: 0;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.list-grid-container {
+  flex-shrink: 1;
+  flex-grow: 1;
+  overflow: auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 16px;
+}
+
+.list-grid-container .list-grid-columns {
+  display: grid;
+  align-self: flex-start;
+  grid-gap: 12px;
+}
+
+.list-card {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #d4d4d4;
+  padding: 8px 12px;
+  border-radius: 5px;
+}
+
+.list-grid-container.filtered-view {
+  grid-template-columns: 1fr;
+}
+
+.list-grid-container.filtered-view .list-grid-columns {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+
+.list-card .list-title {
+  font-weight: 600;
+  padding: 0 0 16px;
+}
+
+.list-card .list-description {
+  color: #999;
+}
+
+.list-card .list-status {
+  padding: 2px 8px;
+  align-self: flex-end;
+  border-radius: 12px;
+  font-size: 12px;
+  background: #d4d4d4;
+}
+
+.card-button {
+  border: none;
+  background: transparent;
+  padding: 0;
+  cursor: pointer;
+  margin: 4px 4px 4px 0;
+}
+
+.card-button.delete {
+  color: #D11A2A;
+}
+
+.card-button.edit {
+  color: #368bb7;
+}
+
+.add-task-btn {
+  background: #d4d4d4;
+  border: none;
+  padding: 4px 8px;
+  margin: 0 8px;
+  border-radius: 5px;
+  color: #515151;
+  cursor: pointer;
+}
